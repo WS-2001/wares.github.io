@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<title>Money Tracker</title>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/projects.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="../js.js"></script>
+</head>
+
+<body>
+    <div id="imageModal" class="modal">
+        <span class="close">&times; Close</span>
+        <img class="modal-content" id="img01">
+    </div>
+    <div class="page-container">
+        <div class="flex-container">
+            <div class="navbar">
+                <!-- Hamburger menu icon for small screens -->
+                <div class="nav-toggle">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+                <!-- Navigation Bar -->
+                <div id="nav-placeholder"></div>
+            </div>
+
+            <div class="content">
+                <!-- Money Tracker Project Page -->
+                <h1 class="title">Money Tracker</h1>
+                <p class="body"><b>iOS app to manage financial transactions between friends and family, fully leveraging Apple's design language and simplicity.</b></p>
+                <button onclick="window.open('https://github.com/WS-2001/MoneyTrackerV3','_blank');" type="button">
+                    <i class="fa fa-github" style="font-size:24px; padding-right:4px"></i>GitHub Repository (opens in new tab)
+                </button>
+                <p class="body">Personally, calculating how much you owe people and vice-versa took a lot of effort and was both tiresome and boring - especially during public outings where you just want to quickly track the 'transaction' and go back to socialising. My aim with this app was to fix that, and to achieve that I set myself many personal goals. The main ones that stood out to me were the following:</p>
+                <ul class="list">
+                    <li>Using research on similar apps on the market, have the right balance between complexity and simplicity to ensure it's quick, but also allow for a power user to use it effectively with advanced options.</li>
+                    <li>The app had to be quick to open and navigate to ensure any actions the user wanted to execute happened as fast as possible. To do this, I calculated time-to-first-transaction and time-to-open times for several similar apps already on the market.</li>
+                    <li>Feeling like a native Apple app was a must for simplicity. This would allow anyone to use the app effectively as it would be something they are already familiar with.</li>
+                </ul>
+                <p class="body">Simplicity, speed, power. Based on my research, it was clear that I had to implement these three elements in an efficient and effective way to deem it a success. My other goals were important to me, but these took priority during development.</p>
+                <br>
+
+                <!-- Table of software used -->
+                <h1>Applications and Software used</h1>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="main">Xcode</td>
+                            <td>Used for the development of the app. It's the IDE required for iOS development. It has a very useful device simulator allowing for easy testing!</td>
+                        </tr>
+                        <tr>
+                            <td class="main">SF Symbols</td>
+                            <td>Used for an easy overview of the various built-in icons made by Apple, as well as adapting any icon settings to fit my needs.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+
+                <!-- Explanation of app -->
+                <h1>The App</h1>
+                <p>In line with Apple's design language, there are two tabs at the bottom of the screen and all have that distinct, familiar Apple look. SwiftUI was specifically chosen for the familiar Apple aesthethic, and straightforward implementation process of all elements. Everything animates and interacts the same way as it would in a native Apple app.</p>
+                <br>
+
+                <!-- First section -->
+                <div class="image-with-text">
+                    <img class="left-side clickable-image" src="../images/moneytracker-friends.png" alt="money tracker app friends view">
+                    <img class="left-side clickable-image" src="../images/moneytracker-settings.png" alt="money tracker app settings view">
+                    <div class="text-content">
+                        <h2>Friends</h2>
+                        <p>The Friends view is where the user will be most of the time. You can see an overview of all friends, total amounts borrowed and lent for each friend including a total amount, a visualisation for lent and borrowed amounts, and friends are interactable for deeper, more detailed views.</p>
+                        <h2>Settings</h2>
+                        <p>The Settings view allows the user to customise the app to their needs. The view also contains an 'About' section and a 'Help' section to assist the user with getting started. There are various options available to customise the app to any user's needs. These include disabling certain aspects of the app, customising icons, a dark mode, deleting all data in one tap, and more!</p>
+                    </div>
+                </div>
+                <br><br>
+
+                <!-- Second section -->
+                <div class="image-with-text">
+                        <div class="text-content">
+                        <h2>Detailed Friend View</h2>
+                        <p>Tapping on any name on the Friends view allows the user to see all transactions associated with that friend. Transactions can be added at the bottom of the view, with no extra pop-ups or modals. Just type and add.</p>
+                        <h2>Sorting & Filtering</h2>
+                        <p>Each detailed friends view has sorting and filtering options to ensure the user has options available on how they'd like their data presented.</p>
+                        <h2>Editing a Transaction</h2>
+                        <p>All transactions can be edited, and all have a note field to add a note of any length.</p>
+                    </div>
+                    <img class="right-side clickable-image" src="../images/moneytracker-detailedFriend.png" alt="money tracker app detailed friend view with a list of all transactions">
+                    <img class="right-side clickable-image" src="../images/moneytracker-sortAndFilter.png" alt="money tracker app sort and filter options; able to sort by amount and date">
+                    <img class="right-side clickable-image singular" id="singular" src="../images/moneytracker-editTransaction.png" alt="money tracker app edit transaction view">
+                </div>
+                <br><br>
+
+                <!-- Third section -->
+                <div class="image-with-text">
+                    <img class="left-side clickable-image" src="../images/moneytracker-inputvalidation1.png" alt="money tracker app input validation for attempting to add a transaction without a value">
+                    <img class="left-side clickable-image" src="../images/moneytracker-inputvalidation2.png" alt="money tracker app input validation for attempting to add a friend without a value">
+                    <div class="text-content">
+                        <h2>Input Validation</h2>
+                        <p>All input fields have input validation to ensure no incompatible data is entered. If on the off-chance incompatible data is entered, it is dealt with by the app to ensure nothing gets corrupted and the app continues to function. A little message varying depending on input field appears when input validation is triggered! :)</p>
+                        <h2>Haptics</h2>
+                        <p>Something that can't be seen, but can instead be felt is the inclusion of haptics. I really like it when apps include fun little features that aren't necessary but really contribute to the app's feel. Every single time it happens I notice and appreciate it instantly as it really helps to feel like you tapped on something physical - and personally I think it's really satisfying. For my app I have tried to replicate that by adding haptics when switching between tabs at the bottom of the screen, switching between toggles in Settings, editing a transaction, and many more places!</p>
+                    </div>
+                </div>
+                <br><br>
+
+                <!-- Fourth section -->
+                <div class="image-with-text">
+                    <div class="text-content">
+                        <h2>Swipe to Delete</h2>
+                        <p>I am highlighting this to reinforce how much I wanted this app to feel like a native Apple app. I ensured the user could delete an entry by swiping to the left - reminiscient of a native Apple app (this was one of my many goals!).</p>
+                        <h2>Data Deletion & Dark Mode</h2>
+                        <p>Rather than individually deleting every entry, I wanted the user to have the option to delete all data in one swift tap (with many warnings!). Oh, and dark mode is enabled for this screenshot! :)</p>
+                        <h2>Help</h2>
+                        <p>The Settings view includes a help page to assist users in getting started and using the app.</p>
+                    </div>
+                    <img class="right-side clickable-image" src="../images/moneytracker-delete.png" alt="money tracker app delete an entry with a swipe motion reminiscient of a native apple app">
+                    <img class="right-side clickable-image" src="../images/moneytracker-deleteAllData.png" alt="money tracker app delete all data with one tap; with dark mode enabled">
+                    <img class="right-side clickable-image" id="singular" src="../images/moneytracker-help.png" alt="money tracker app help page with tips and suggestions for users to get started">
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer-placeholder"></div>
+    </div>
+
+</body>
+
+</html>

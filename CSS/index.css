@@ -1,0 +1,227 @@
+/* index.css is primarily used in the index.html home page, but
+includes general styling used by all pages e.g. hyperlinks and tables */
+
+* {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: regular;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 15%;
+}
+
+.content {
+    flex: 1;
+    padding: 2em;
+    overflow-y: auto;
+}
+
+footer {
+    font-size: 10px;
+    padding: 1em;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    max-width: 100%;
+}
+
+
+/* Hyperlinks in <p> bodies */
+.body a {
+    font-weight: bold;
+    text-decoration: underline;
+    transition: 0.3s ease;
+}
+
+.body a:hover {
+    background-color: #68ca18;
+    transition: 0.3s ease;
+}
+
+.body a:visited {
+    color: black;
+}
+
+/* Tables */
+table {
+    border: 2px none black;
+}
+
+th {
+    background-color: #68ca18;
+}
+
+th, td {
+    padding: 1em;
+}
+
+td {
+    background-color: #F8F8F8;
+}
+
+table .main {
+    border-left: 2px solid black;
+    background-color: #F1F1F1;
+    width: 15%;
+}
+
+button {
+    background-color: white;
+    padding: 1em;
+    font-size: 16px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px 2px 2px 2px;
+    display: flex;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #68ca18;
+    border-width: 2px 2px 4px 2px;
+    transition-duration: 0.3s;
+}
+
+/* Image pop-up when clicked/tapped */
+.clickable-image {
+    transition: 0.3s ease;
+}
+
+.clickable-image:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: 0.3s ease;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    background-color:rgba(0, 0, 0, 0.5)
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+}
+
+form {
+    position: relative;
+    z-index: -1;
+}
+
+::placeholder {
+    color: grey;
+}
+
+form input {
+    position: relative;
+    bottom: 5px;
+    border: 1.5px solid black;
+    outline: none;
+    padding: 1em;
+    width: 30vw;
+    transition: 0.3s ease;
+}
+
+form input:focus {
+    border-left: 3px solid #68ca18;
+    transition: 0.3s ease;
+}
+
+form input:focus::placeholder {
+    transition: 0.3s ease;
+}
+
+form textarea {
+    border: 1.5px solid black;
+    outline: none;
+    padding: 1em;
+    resize: none;
+    width: 30vw;
+    height: 15em;
+    transition: 0.3s ease;
+}
+
+form textarea:focus {
+    border-left: 3px solid #68ca18;
+    transition: 0.3s ease;
+}
+
+form button[type="submit"] {
+    position: relative;
+    top: 0.2em;
+}
+
+.tiny-warning {
+    font-size: 12px;
+    color: grey;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .close {
+        font-size: 30px;
+        padding: 5px;
+    }
+
+    /* Center footer for mobile devices */
+    footer {
+        position: absolute;
+        width: 70%;
+    }
+
+    .form-container {
+        width: 60vw;
+    }
+
+    form input, form textarea {
+        width: 70%;
+    }
+}

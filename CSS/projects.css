@@ -1,0 +1,123 @@
+/* projects.css used by projects.html */
+
+.card-container {
+    display: flex;
+    gap: 2em;
+}
+
+/* Add shadows to create the "card" effect */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+    width: 20%;
+    border-bottom: 5px solid white;
+    text-align: center;
+}
+
+/* Ensuring responsive design: images on cards always resize relative to parent card */
+.card img {
+    width: 100%;
+    height: auto;
+    max-width: 25vh;
+    max-height: 20vh;
+    transition: 0.3s ease;
+    object-fit: contain;
+}
+
+/* On hover, add a deeper shadow to card and enlarge */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: 0.3s ease;
+    border-bottom: 5px solid black;
+}
+
+/* Make entire card clickable and disable text decorations */
+.card a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.card a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.card h4 {
+    padding: 10px;
+    background-color: white;
+    transition: 0.3s ease;
+    border-bottom: solid white;
+}
+
+.card:hover h4 {
+    border-bottom: solid #68ca18;
+    transition: 0.3s ease;
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
+
+.list li {
+    padding: 5px;
+}
+
+/* Images with descriptive text next to them */
+.image-with-text {
+    display: flex;
+    align-items: center;
+}
+
+.image-with-text img.left-side {
+    width: 20%;
+    margin-right: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.image-with-text img.right-side {
+    width: 20%;
+    margin-left: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.text-content {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 50%;
+    }
+
+    .image-with-text {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .image-with-text img.left-side {
+        min-width: 50%;
+        margin: 0;
+    }
+
+    .image-with-text img.right-side {
+        min-width: 50%;
+        margin: 0;
+    }
+
+    #singular {
+        min-width: 100%;
+    }
+
+    br {
+        display: none;
+    }
+}
