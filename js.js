@@ -7,12 +7,12 @@ $(document).ready(function() {
 
 // Load navbar
 $(function () {
-    $("#nav-placeholder").load("./nav.html");
+    $("#nav-placeholder").load("/nav.html");
 });
 
 // Load footer
 $(function () {
-    $("#footer-placeholder").load("./footer.html");
+    $("#footer-placeholder").load("/footer.html");
 });
 
 // Image pop-up on click/tap
