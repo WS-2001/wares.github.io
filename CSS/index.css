@@ -54,6 +54,21 @@ footer {
     color: black;
 }
 
+/* Hyperlinks in <footer> */
+footer a {
+    text-decoration: underline;
+    transition: 0.3s ease;
+}
+
+footer a:hover {
+    background-color: #68ca18;
+    transition: 0.3s ease;
+}
+
+footer a:visited {
+    color: black;
+}
+
 /* Tables */
 table {
     border: 2px none black;
@@ -153,7 +168,6 @@ button:hover {
 
 form {
     position: relative;
-    z-index: -1;
 }
 
 ::placeholder {
