@@ -40,6 +40,7 @@ footer {
 
 /* Hyperlinks in <p> bodies */
 .body a {
+    color: black;
     font-weight: bold;
     text-decoration: underline;
     transition: 0.3s ease;
@@ -56,6 +57,7 @@ footer {
 
 /* Hyperlinks in <footer> */
 footer a {
+    color: black;
     text-decoration: underline;
     transition: 0.3s ease;
 }
@@ -93,6 +95,7 @@ table .main {
 }
 
 button {
+    color: black;
     background-color: white;
     padding: 1em;
     font-size: 16px;
