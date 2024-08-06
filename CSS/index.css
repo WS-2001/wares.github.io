@@ -8,6 +8,113 @@ includes general styling used by all pages e.g. hyperlinks and tables */
     font-style: normal;
 }
 
+/* Container for animated background */
+.bg-image {
+    position: fixed;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: transparent;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.5;
+    filter: blur(8px);
+    animation: moveCircle 20s linear infinite;
+    transform: scale(1);
+    will-change: transform;
+}
+
+.circle:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    background: rgba(169, 169, 169, 0.5); /* dark grey */
+    top: 10%;
+    left: 20%;
+    animation-duration: 25s;
+}
+
+.circle:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    background: rgba(192, 192, 192, 0.5); /* silver */
+    top: 40%;
+    left: 60%;
+    animation-duration: 30s;
+}
+
+.circle:nth-child(3) {
+    width: 200px;
+    height: 200px;
+    background: rgba(211, 211, 211, 0.5); /* light grey */
+    top: 70%;
+    left: 30%;
+    animation-duration: 35s;
+}
+
+.circle:nth-child(4) {
+    width: 120px;
+    height: 120px;
+    background: rgba(169, 169, 169, 0.5); /* dark grey */
+    top: 20%;
+    left: 70%;
+    animation-duration: 40s;
+}
+
+.circle:nth-child(5) {
+    width: 180px;
+    height: 180px;
+    background: rgba(192, 192, 192, 0.5); /* silver */
+    top: 50%;
+    left: 10%;
+    animation-duration: 45s;
+}
+
+.circle:nth-child(6) {
+    width: 140px;
+    height: 140px;
+    background: rgba(211, 211, 211, 0.5); /* light grey */
+    top: 80%;
+    left: 50%;
+    animation-duration: 50s;
+}
+
+.circle:nth-child(7) {
+    width: 160px;
+    height: 160px;
+    background: rgba(169, 169, 169, 0.5); /* dark grey */
+    top: 30%;
+    left: 80%;
+    animation-duration: 55s;
+}
+
+.circle:nth-child(8) {
+    width: 135px;
+    height: 135px;
+    background: rgba(192, 192, 192, 0.5); /* dark grey */
+    top: 60%;
+    left: 40%;
+    animation-duration: 45s;
+}
+
+@keyframes moveCircle {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(50px, 50px) scale(1.1);
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -17,6 +124,7 @@ html, body {
 }
 
 .page-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -240,5 +348,44 @@ form button[type="submit"] {
 
     form input, form textarea {
         width: 70%;
+    }
+
+    .circle {
+        filter: blur(8px);
+    }
+
+    .circle:nth-child(1) {
+        width: 75px;
+        height: 75px;
+    }
+
+    .circle:nth-child(2) {
+        width: 50px;
+        height: 50px;
+    }
+
+    .circle:nth-child(3) {
+        width: 100px;
+        height: 100px;
+    }
+
+    .circle:nth-child(4) {
+        width: 60px;
+        height: 60px;
+    }
+
+    .circle:nth-child(5) {
+        width: 90px;
+        height: 90px;
+    }
+
+    .circle:nth-child(6) {
+        width: 70px;
+        height: 70px;
+    }
+
+    .circle:nth-child(7) {
+        width: 80px;
+        height: 80px;
     }
 }

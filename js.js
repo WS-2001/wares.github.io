@@ -34,3 +34,23 @@ $(document).ready(function() {
         }
     });
 });
+
+// Background circles on scroll
+document.addEventListener('DOMContentLoaded', function() {
+    const circles = document.querySelectorAll('.circle');
+
+    function updateCirclePositions() {
+        const scrollTop = window.scrollY;
+        circles.forEach((circle, index) => {
+            // Adjust this multiplier to control the speed of the parallax effect
+            const speed = (index + 1) * 0.5;
+            const translateY = scrollTop * speed;
+            circle.style.transform = `translateY(${translateY}px)`;
+        });
+        // Request the next frame
+        requestAnimationFrame(updateCirclePositions);
+    }
+
+    // Initial call to set positions
+    updateCirclePositions();
+});
