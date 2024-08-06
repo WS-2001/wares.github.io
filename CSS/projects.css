@@ -12,6 +12,7 @@
     width: 20%;
     border-bottom: 5px solid white;
     text-align: center;
+    background-color: white;
 }
 
 /* Ensuring responsive design: images on cards always resize relative to parent card */
