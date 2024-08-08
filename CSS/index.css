@@ -339,7 +339,7 @@ form button[type="submit"] {
     /* Center footer for mobile devices */
     footer {
         position: absolute;
-        width: 70%;
+        width: 85%;
     }
 
     .form-container {
