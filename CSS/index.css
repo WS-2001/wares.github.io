@@ -329,8 +329,107 @@ form button[type="submit"] {
     color: grey;
 }
 
+.content-container {
+    display: flex;
+    padding: 1em;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.content-card {
+    border-left:2px black solid;
+    background-color: #b7b7b735;
+    flex-direction: row;
+    padding: 1em;
+    margin: 0.2em;
+    width: 25vw;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.overview-title {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.home-title {
+    font-weight: 800;
+    font-variant: small-caps;
+    font-size: 42px;
+}
+
+.home-body {
+    text-align: center;
+    font-size: 24px;
+    font-variant-caps: all-small-caps;
+}
+
+/* Experience card container */
+.experience-card {
+    padding: 0.75em;
+    margin: 1em 0;
+    /* border-left: 2px black solid; */
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.experience-card .title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    color: #333; /* Darker text color */
+}
+
+/* Experience-info container */
+.experience-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Employer */
+.experience-info .employer {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555; /* Medium-dark text color */
+    padding-right: 5px;
+}
+
+/* Date */
+.experience-info .date {
+    font-size: 12px;
+    color: #777;
+    display: flex;
+    align-items: center;
+}
+
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
+    .experience-card .title {
+        font-size: 16px;
+    }
+    
+    .experience-info .employer {
+        font-size: 12px;
+    }
+    
+    .experience-info .date {
+        font-size: 10px;
+    }
+
+    .home-title {
+        font-size:36px;
+    }
+
+    .home-body {
+        font-size: 20px;
+    }
+
+    .content-card {
+        width: 100vw;
+    }
+
     .close {
         font-size: 30px;
         padding: 5px;

@@ -87,6 +87,7 @@
         flex-direction: column;
         width: 100%;
         background-color: #f4f4f4;
+        font-size: 14px;
     }
 
     .navbar ol li {
