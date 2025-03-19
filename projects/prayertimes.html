@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<title>Prayer Times & Fasting Tracker</title>
+<title>PrayWay</title>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,14 +48,14 @@
             <div class="content">
                 <!-- Prayer Times Project Page -->
                 <h1 class="title">PrayWay - Prayer Times & Fasting Tracker</h1>
-                <p class="body"><b>Lightweight prayer companion with extensive features. NO pop-ups and minimal ads.</b></p>
+                <p class="body"><b>Lightweight companion app with extensive features, no pop-ups and no ads.</b></p>
                 <button onclick="window.open('#','_blank');" type="button">
                     <i class="fa fa-apple" style="font-size:24px; padding-right:4px"></i>App Store (opens in new tab)
                 </button>
-                <p class="body">Over time, I repeatedly watched friends and family suffer with the bombardment of ads, pop-ups and subscriptions just for using one of the existing apps for a few seconds. It made one thing very clear: there needs to be an app that is user-friendly and not built for the purpose of making money.</p>
+                <p class="body">Over time, I repeatedly watched friends and family suffer with the bombardment of ads, pop-ups and subscriptions just for using one of the existing apps for a few seconds. It made one thing very clear: there needs to be an app that is user-friendly and not purely built for the purpose of making money.</p>
                 <br>
 
-                <!-- Table of software used -->
+                <!-- Table of software used
                 <h1>Applications and Software used</h1>
                 <table>
                     <tbody>
@@ -64,74 +64,61 @@
                             <td>Used for the development of the app. It's the IDE required for iOS development. It has a very useful device simulator allowing for easy testing!</td>
                         </tr>
                         <tr>
-                            <td class="main">Aladhan API</td>
+                            <td class="main"></td>
                             <td>Allowed for easy fetching of prayer times with many options available. Free to use, including adhan .mp3 files.</td>
                         </tr>
                     </tbody>
                 </table>
-                <br>
+                <br> -->
 
                 <!-- Explanation of app -->
                 <h1>The App</h1>
-                <p>In line with Apple's design language, there are two tabs at the bottom of the screen and all have that distinct, familiar Apple look. SwiftUI was specifically chosen for the familiar Apple aesthethic, and straightforward implementation process of all elements. Everything animates and interacts the same way as it would in a native Apple app.</p>
+                <p>Using Apple's design language to ensure consistency, familiarity and simplicity, the app leverages a sleek and modern aesthetic including features like dark mode and haptics.</p>
                 <br>
 
-                <!-- First section -->
-                <div class="image-with-text">
-                    <img class="left-side clickable-image" src="../images/moneytracker-friends.png" alt="money tracker app friends view">
-                    <img class="left-side clickable-image" src="../images/moneytracker-settings.png" alt="money tracker app settings view">
-                    <div class="text-content">
-                        <h2>Friends</h2>
-                        <p>The Friends view is where the user will be most of the time. You can see an overview of all friends, total amounts borrowed and lent for each friend including a total amount, a visualisation for lent and borrowed amounts, and friends are interactable for deeper, more detailed views.</p>
-                        <h2>Settings</h2>
-                        <p>The Settings view allows the user to customise the app to their needs. The view also contains an 'About' section and a 'Help' section to assist the user with getting started. There are various options available to customise the app to any user's needs. These include disabling certain aspects of the app, customising icons, a dark mode, deleting all data in one tap, and more!</p>
+                
+                <div class="gallery">
+                    <div class="gallery-container">
+                        <figure class="gallery-item">
+                            <img src="../images/prayertimes-home.png" alt="PrayWay App: Home page showcasing all prayer times, next prayer including time, and ability to see upcoming days' prayer times">
+                            <figcaption>Prayer View: See today's prayers, next prayer in hours/minutes and future prayers.</figcaption>
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="../images/prayertimes-homedark.png" alt="PrayWay App: Home page showcasing all prayer times, next prayer including time, and ability to see upcoming days' prayer times but all in dark mode">
+                            <figcaption>Prayer View (Dark Mode): To suit all users, a functional and sleek dark mode exists to complement the app.</figcaption>
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="../images/prayertimes-quranbookmarks.png" alt="Money Tracker App: Historical data view with a graph for both lend and borrow giving the user insights into transactions.">
+                            <figcaption>Quran View: See progress of prayers</figcaption>
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="../images/prayertimes-quran.png" alt="Money Tracker App: Split bill view with the ability to split between multiple friends">
+                            <figcaption>Surah View: Split bills between multiple friends, adding it to each respective friend entry with a customisable note.</figcaption>
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="../images/prayertimes-fasting.png" alt="Money Tracker App: Conversion view with the ability to convert between currencies">
+                            <figcaption>Currency Conversion: Convert between currencies with the current conversion rate fetched from ExchangeRate-API.</figcaption>
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="../images/prayertimes-fastingdetail.png" alt="Money Tracker App: Settings view with the ability to customise the app">
+                            <figcaption>Settings: Customisation options, app information and a dark mode toggle.</figcaption>
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="../images/prayertimes-tasbeeh.png" alt="Money Tracker App: Settings view with the ability to customise the app">
+                            <figcaption>Settings: Customisation options, app information and a dark mode toggle.</figcaption>
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="../images/prayertimes-settings.png" alt="Money Tracker App: Settings view with the ability to customise the app">
+                            <figcaption>Settings: Customisation options, app information and a dark mode toggle.</figcaption>
+                        </figure>
                     </div>
+                    <div class="gallery-nav">
+                        <button class="prev">&#10094;</button>
+                        <button class="next">&#10095;</button>
+                    </div>
+                    <div class="gallery-indicator"></div>
                 </div>
-                <br><br>
 
-                <!-- Second section -->
-                <div class="image-with-text">
-                        <div class="text-content">
-                        <h2>Detailed Friend View</h2>
-                        <p>Tapping on any name on the Friends view allows the user to see all transactions associated with that friend. Transactions can be added at the bottom of the view, with no extra pop-ups or modals. Just type and add.</p>
-                        <h2>Sorting & Filtering</h2>
-                        <p>Each detailed friends view has sorting and filtering options to ensure the user has options available on how they'd like their data presented.</p>
-                        <h2>Editing a Transaction</h2>
-                        <p>All transactions can be edited, and all have a note field to add a note of any length.</p>
-                    </div>
-                    <img class="right-side clickable-image" src="../images/moneytracker-detailedFriend.png" alt="money tracker app detailed friend view with a list of all transactions">
-                    <img class="right-side clickable-image" src="../images/moneytracker-sortAndFilter.png" alt="money tracker app sort and filter options; able to sort by amount and date">
-                    <img class="right-side clickable-image singular" id="singular" src="../images/moneytracker-editTransaction.png" alt="money tracker app edit transaction view">
-                </div>
-                <br><br>
-
-                <!-- Third section -->
-                <div class="image-with-text">
-                    <img class="left-side clickable-image" src="../images/moneytracker-inputvalidation1.png" alt="money tracker app input validation for attempting to add a transaction without a value">
-                    <img class="left-side clickable-image" src="../images/moneytracker-inputvalidation2.png" alt="money tracker app input validation for attempting to add a friend without a value">
-                    <div class="text-content">
-                        <h2>Input Validation</h2>
-                        <p>All input fields have input validation to ensure no incompatible data is entered. If on the off-chance incompatible data is entered, it is dealt with by the app to ensure nothing gets corrupted and the app continues to function. A little message varying depending on input field appears when input validation is triggered! :)</p>
-                        <h2>Haptics</h2>
-                        <p>Something that can't be seen, but can instead be felt is the inclusion of haptics. I really like it when apps include fun little features that aren't necessary but really contribute to the app's feel. Every single time it happens I notice and appreciate it instantly as it really helps to feel like you tapped on something physical - and personally I think it's really satisfying. For my app I have tried to replicate that by adding haptics when switching between tabs at the bottom of the screen, switching between toggles in Settings, editing a transaction, and many more places!</p>
-                    </div>
-                </div>
-                <br><br>
-
-                <!-- Fourth section -->
-                <div class="image-with-text">
-                    <div class="text-content">
-                        <h2>Swipe to Delete</h2>
-                        <p>I am highlighting this to reinforce how much I wanted this app to feel like a native Apple app. I ensured the user could delete an entry by swiping to the left - reminiscient of a native Apple app (this was one of my many goals!).</p>
-                        <h2>Data Deletion & Dark Mode</h2>
-                        <p>Rather than individually deleting every entry, I wanted the user to have the option to delete all data in one swift tap (with many warnings!). Oh, and dark mode is enabled for this screenshot! :)</p>
-                        <h2>Help</h2>
-                        <p>The Settings view includes a help page to assist users in getting started and using the app.</p>
-                    </div>
-                    <img class="right-side clickable-image" src="../images/moneytracker-delete.png" alt="money tracker app delete an entry with a swipe motion reminiscient of a native apple app">
-                    <img class="right-side clickable-image" src="../images/moneytracker-deleteAllData.png" alt="money tracker app delete all data with one tap; with dark mode enabled">
-                    <img class="right-side clickable-image" id="singular" src="../images/moneytracker-help.png" alt="money tracker app help page with tips and suggestions for users to get started">
-                </div>
             </div>
             
         </div>
