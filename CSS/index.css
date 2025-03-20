@@ -367,16 +367,19 @@ form button[type="submit"] {
 
 /* Experience card container */
 .experience-card {
-    padding: 0.75em;
-    margin: 1em 0;
+    padding-top: 2px;
+    padding-left: 0.5em;
+    /* margin: 1em 0; */
+    border-left: 2px solid #0000004b;
+    /* padding-left: 10px; */
     /* border-left: 2px black solid; */
-    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    /* box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1); */
 }
 
 .experience-card .title {
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 0.5em;
+    /* margin-bottom: 0.5em; */
     color: #333; /* Darker text color */
 }
 
@@ -401,6 +404,18 @@ form button[type="submit"] {
     color: #777;
     display: flex;
     align-items: center;
+}
+
+/* Education */
+.education-card {
+    border-left: 2px solid #0000004b;
+    padding-left: 10px;
+}
+
+.education-card p {
+    font-size: 14px;
+    color: #00000091;
+    /* color: rgb(69, 69, 69); */
 }
 
 /* Media queries for responsiveness */
